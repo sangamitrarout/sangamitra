@@ -3,94 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangamitra | Cloud Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .node-dot { height: 10px; width: 10px; background-color: #38bdf8; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #38bdf8; }
-    </style>
-</head>
-<body class="p-6 md:p-20">
-
-    <header class="max-w-4xl mx-auto text-center mb-16">
-        <h1 class="text-5xl font-extrabold mb-4">I'm <span class="gradient-text">Sangamitra</span></h1>
-        <p class="text-xl text-slate-400">BCA Cloud Computing Student | Full-Stack Architect</p>
-        <div class="mt-6 space-x-4">
-            <span class="glass px-4 py-2 rounded-full text-sm font-mono tracking-tighter">#AWS</span>
-            <span class="glass px-4 py-2 rounded-full text-sm font-mono tracking-tighter">#MERN</span>
-            <span class="glass px-4 py-2 rounded-full text-sm font-mono tracking-tighter">#Virtualization</span>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <section class="glass p-8 rounded-3xl col-span-1 md:col-span-2">
-            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
-                <span class="node-dot"></span> About Me
-            </h2>
-            <p class="text-slate-300 leading-relaxed">
-                As a BCA student specializing in Cloud Computing, I bridge the gap between robust infrastructure and intuitive user interfaces. I don't just build apps; I build scalable systems.
-            </p>
-        </section>
-
-        <section class="glass p-8 rounded-3xl">
-            <h2 class="text-2xl font-bold mb-6">🏆 Achievements</h2>
-            <ul class="space-y-4">
-                <li class="border-l-2 border-sky-500 pl-4">
-                    <h3 class="font-bold">Academic Excellence</h3>
-                    <p class="text-sm text-slate-400">Maintained a [Insert GPA] throughout my BCA journey.</p>
-                </li>
-                <li class="border-l-2 border-indigo-500 pl-4">
-                    <h3 class="font-bold">Hackathon Finalist</h3>
-                    <p class="text-sm text-slate-400">Developed a cloud-based storage solution in 24 hours.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="glass p-8 rounded-3xl">
-            <h2 class="text-2xl font-bold mb-6">📜 Certifications</h2>
-            <div class="grid grid-cols-1 gap-3">
-                <div class="bg-slate-800 p-3 rounded-xl flex justify-between items-center">
-                    <span>AWS Certified Cloud Practitioner</span>
-                    <span class="text-sky-400 text-xs">Verify</span>
-                </div>
-                <div class="bg-slate-800 p-3 rounded-xl flex justify-between items-center">
-                    <span>Google Cloud Digital Leader</span>
-                    <span class="text-sky-400 text-xs">Verify</span>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="mt-20 text-center text-slate-500 text-sm">
-        Built with ❤️ and Cloud logic by Sangamitra &copy; 2026
-    </footer>
-
-</body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangamitra | Cloud Developer Portfolio</title>
+    <title>Sangamitra Rout | Cloud Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050b1a; /* Deep Dark Blue */
+            --bg-color: #050b1a; 
         }
         
         body { 
             background-color: var(--bg-color);
-            /* Creating a floral pattern using radial gradients */
             background-image: 
                 radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.1) 0%, transparent 2%),
                 radial-gradient(circle at 90% 85%, rgba(234, 179, 8, 0.1) 0%, transparent 2%),
                 radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.05) 0%, transparent 3%),
-                radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.08) 0%, transparent 2%);
+                radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.08) 0%, transparent 2%),
+                radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 3%);
             background-attachment: fixed;
             color: #f8fafc; 
             font-family: 'Inter', sans-serif; 
@@ -105,7 +33,7 @@
         }
 
         .gradient-text { 
-            background: linear-gradient(90deg, #38bdf8, #818cf8); 
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #fb7185); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
@@ -116,14 +44,27 @@
             border-radius: 50%;
             border: 4px solid #38bdf8;
             object-fit: cover;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
+            transition: transform 0.5s ease;
         }
 
-        /* Flower Decor Elements */
+        .profile-img:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        /* Enhanced Flower Decor */
         .flower {
             position: fixed;
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.5;
+            pointer-events: none;
+            filter: drop-shadow(0 0 8px currentColor);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
         }
 
         .page-section {
@@ -134,45 +75,47 @@
             padding: 4rem 1rem;
         }
 
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #38bdf8;
-            text-shadow: 0 0 8px #38bdf8;
-        }
+        .nav-link { transition: all 0.3s ease; }
+        .nav-link:hover { color: #38bdf8; text-shadow: 0 0 8px #38bdf8; }
     </style>
 </head>
 <body>
 
-    <div class="flower text-red-500 top-10 left-10 text-2xl">✿</div>
-    <div class="flower text-yellow-400 top-1/2 right-20 text-xl">❀</div>
-    <div class="flower text-red-400 bottom-20 left-1/4 text-lg">✾</div>
-    <div class="flower text-yellow-500 top-1/4 right-1/3 text-2xl">✿</div>
+    <div class="flower text-red-500 top-10 left-10 text-3xl">✿</div>
+    <div class="flower text-yellow-400 top-1/2 right-20 text-2xl" style="animation-delay: 1s;">❀</div>
+    <div class="flower text-red-400 bottom-20 left-1/4 text-xl" style="animation-delay: 2s;">✾</div>
+    <div class="flower text-yellow-500 top-1/4 right-1/3 text-3xl" style="animation-delay: 3s;">✿</div>
+    <div class="flower text-sky-400 bottom-10 right-10 text-2xl" style="animation-delay: 4s;">❁</div>
+    <div class="flower text-pink-400 top-2/3 left-10 text-lg" style="animation-delay: 1.5s;">❀</div>
+    <div class="flower text-orange-400 top-10 right-1/4 text-xl" style="animation-delay: 2.5s;">✾</div>
 
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass px-6 py-3 rounded-full flex gap-8 font-medium">
         <a href="#home" class="nav-link">Home</a>
         <a href="#details" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
     <section id="home" class="page-section max-w-4xl mx-auto text-center">
         <div class="mb-8 flex justify-center">
-            <img src="https://via.placeholder.com/180" alt="Sangamitra" class="profile-img">
+            <img src="https://via.placeholder.com/180" alt="Sangamitra Rout" class="profile-img">
         </div>
         
         <header>
-            <h1 class="text-6xl font-extrabold mb-4">I'm <span class="gradient-text">Sangamitra</span></h1>
+            <h1 class="text-6xl font-extrabold mb-4">I'm <span class="gradient-text">Sangamitra Rout</span></h1>
             <p class="text-2xl text-slate-400 mb-8">BCA Cloud Computing Student | Full-Stack Architect</p>
             
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#AWS</span>
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#MERN</span>
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#Virtualization</span>
+                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#AWS_Solutions</span>
+                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#MERN_Stack</span>
+                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#Kubernetes</span>
+                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#DevOps</span>
             </div>
 
             <a href="#details" class="animate-bounce inline-block text-sky-400 mt-10">
                 <p class="text-xs uppercase tracking-widest mb-2">Scroll Down</p>
-                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="id19 14l-7 7-7-7"></path></svg>
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7"></path>
+                </svg>
             </a>
         </header>
     </section>
@@ -186,7 +129,7 @@
                     About Me
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    As a BCA student specializing in Cloud Computing, I bridge the gap between robust infrastructure and intuitive user interfaces. I don't just build apps; I build scalable systems that live and breathe in the cloud.
+                    Hello! I'm <span class="text-white font-semibold">Sangamitra Rout</span>. As a BCA student specializing in Cloud Computing, I bridge the gap between robust infrastructure and intuitive user interfaces. I don't just build apps; I build scalable systems that live and breathe in the cloud. My goal is to optimize deployment pipelines and create seamless user experiences.
                 </p>
             </section>
 
@@ -195,11 +138,15 @@
                 <ul class="space-y-6">
                     <li class="border-l-2 border-sky-500 pl-4">
                         <h3 class="font-bold">Academic Excellence</h3>
-                        <p class="text-sm text-slate-400">Maintained a High GPA throughout my BCA journey at [Your University].</p>
+                        <p class="text-sm text-slate-400">Consistent performer with a focus on Distributed Systems and Networking.</p>
                     </li>
                     <li class="border-l-2 border-yellow-500 pl-4">
                         <h3 class="font-bold">Hackathon Finalist</h3>
-                        <p class="text-sm text-slate-400">Developed a cloud-based storage solution in 24 hours.</p>
+                        <p class="text-sm text-slate-400">Built a real-time cloud monitoring dashboard using React and AWS Lambda.</p>
+                    </li>
+                    <li class="border-l-2 border-pink-500 pl-4">
+                        <h3 class="font-bold">Open Source Contributor</h3>
+                        <p class="text-sm text-slate-400">Active contributor to various cloud-native CLI tool repositories.</p>
                     </li>
                 </ul>
             </section>
@@ -209,21 +156,31 @@
                 <div class="space-y-4">
                     <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
                         <span class="font-medium">AWS Certified Cloud Practitioner</span>
-                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full">Verify</span>
+                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
                     </div>
                     <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
                         <span class="font-medium">Google Cloud Digital Leader</span>
-                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full">Verify</span>
+                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
+                    </div>
+                    <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
+                        <span class="font-medium">HashiCorp Terraform Associate</span>
+                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
                     </div>
                 </div>
             </section>
 
         </div>
 
-        <footer class="mt-20 text-center text-slate-500 text-sm">
-            <p>Built with ❤️ and Cloud logic by Sangamitra &copy; 2026</p>
+        <footer id="contact" class="mt-20 text-center text-slate-500 text-sm">
+            <div class="mb-6 flex justify-center gap-6">
+                <a href="#" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-sky-400 transition-colors">GitHub</a>
+                <a href="mailto:contact@sangamitra.com" class="hover:text-sky-400 transition-colors">Email</a>
+            </div>
+            <p>Built with ❤️ and Cloud logic by <span class="text-slate-300">Sangamitra Rout</span> &copy; 2026</p>
         </footer>
     </section>
 
 </body>
 </html>
+
