@@ -3,184 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangamitra Rout | Cloud Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Sangamitra Rout | Portfolio</title>
     <style>
         :root {
-            --bg-color: #050b1a; 
+            --bg-color: #001f3f; /* Dark Blue */
+            --yellow-flower: #FFD700;
+            --red-flower: #FF4136;
+            --text-white: #ffffff;
         }
-        
-        body { 
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.1) 0%, transparent 2%),
-                radial-gradient(circle at 90% 85%, rgba(234, 179, 8, 0.1) 0%, transparent 2%),
-                radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.05) 0%, transparent 3%),
-                radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.08) 0%, transparent 2%),
-                radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 3%);
-            background-attachment: fixed;
-            color: #f8fafc; 
-            font-family: 'Inter', sans-serif; 
-            scroll-behavior: smooth;
+            color: var(--text-white);
+            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        .glass { 
-            background: rgba(15, 23, 42, 0.6); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        /* Creative Floral Background */
+        .flower-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
         }
 
-        .gradient-text { 
-            background: linear-gradient(90deg, #38bdf8, #818cf8, #fb7185); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+        .flower {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            filter: blur(1px);
+        }
+
+        /* Main Content Container */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+            background: rgba(0, 31, 63, 0.8); /* Semi-transparent overlay */
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Profile Section */
+        header {
+            text-align: center;
+            padding-bottom: 50px;
         }
 
         .profile-img {
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            border: 4px solid #38bdf8;
+            border: 4px solid var(--yellow-flower);
             object-fit: cover;
-            box-shadow: 0 0 35px rgba(56, 189, 248, 0.3);
-            transition: transform 0.5s ease;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
         }
 
-        .profile-img:hover {
-            transform: rotate(5deg) scale(1.05);
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, #FFD700, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Enhanced Flower Decor */
-        .flower {
-            position: fixed;
-            z-index: -1;
-            opacity: 0.5;
-            pointer-events: none;
-            filter: drop-shadow(0 0 8px currentColor);
-            animation: float 6s ease-in-out infinite;
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 3px solid var(--red-flower);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0 15px 15px 0;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+        h2 {
+            color: var(--yellow-flower);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .page-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 4rem 1rem;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .nav-link { transition: all 0.3s ease; }
-        .nav-link:hover { color: #38bdf8; text-shadow: 0 0 8px #38bdf8; }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
 
-    <div class="flower text-red-500 top-10 left-10 text-3xl">✿</div>
-    <div class="flower text-yellow-400 top-1/2 right-20 text-2xl" style="animation-delay: 1s;">❀</div>
-    <div class="flower text-red-400 bottom-20 left-1/4 text-xl" style="animation-delay: 2s;">✾</div>
-    <div class="flower text-yellow-500 top-1/4 right-1/3 text-3xl" style="animation-delay: 3s;">✿</div>
-    <div class="flower text-sky-400 bottom-10 right-10 text-2xl" style="animation-delay: 4s;">❁</div>
-    <div class="flower text-pink-400 top-2/3 left-10 text-lg" style="animation-delay: 1.5s;">❀</div>
-    <div class="flower text-orange-400 top-10 right-1/4 text-xl" style="animation-delay: 2.5s;">✾</div>
+    <div class="flower-container" id="flower-box"></div>
 
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass px-6 py-3 rounded-full flex gap-8 font-medium">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#details" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-
-    <section id="home" class="page-section max-w-4xl mx-auto text-center">
-        <div class="mb-8 flex justify-center">
-            <img src="https://via.placeholder.com/180" alt="Sangamitra Rout" class="profile-img">
-        </div>
-        
+    <div class="content">
         <header>
-            <h1 class="text-6xl font-extrabold mb-4">I'm <span class="gradient-text">Sangamitra Rout</span></h1>
-            <p class="text-2xl text-slate-400 mb-8">BCA Cloud Computing Student | Full-Stack Architect</p>
-            
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#AWS_Solutions</span>
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#MERN_Stack</span>
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#Kubernetes</span>
-                <span class="glass px-6 py-2 rounded-full text-sm font-mono border-sky-500/30">#DevOps</span>
-            </div>
-
-            <a href="#details" class="animate-bounce inline-block text-sky-400 mt-10">
-                <p class="text-xs uppercase tracking-widest mb-2">Scroll Down</p>
-                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7"></path>
-                </svg>
-            </a>
+            <img src="https://via.placeholder.com/180" alt="Sangamitra Rout" class="profile-img">
+            <h1>Sangamitra Rout</h1>
+            <p>Creative Professional | Visionary | Innovator</p>
         </header>
-    </section>
 
-    <section id="details" class="page-section max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <section class="glass p-8 rounded-3xl col-span-1 md:col-span-2">
-                <h2 class="text-3xl font-bold mb-4 flex items-center gap-3">
-                    <span class="h-3 w-3 bg-sky-400 rounded-full shadow-[0_0_10px_#38bdf8]"></span> 
-                    About Me
-                </h2>
-                <p class="text-slate-300 text-lg leading-relaxed">
-                    Hello! I'm <span class="text-white font-semibold">Sangamitra Rout</span>. As a BCA student specializing in Cloud Computing, I bridge the gap between robust infrastructure and intuitive user interfaces. I don't just build apps; I build scalable systems that live and breathe in the cloud. My goal is to optimize deployment pipelines and create seamless user experiences.
-                </p>
-            </section>
-
-            <section class="glass p-8 rounded-3xl transform hover:scale-[1.02] transition-transform">
-                <h2 class="text-2xl font-bold mb-6 text-red-400">🏆 Achievements</h2>
-                <ul class="space-y-6">
-                    <li class="border-l-2 border-sky-500 pl-4">
-                        <h3 class="font-bold">Academic Excellence</h3>
-                        <p class="text-sm text-slate-400">Consistent performer with a focus on Distributed Systems and Networking.</p>
-                    </li>
-                    <li class="border-l-2 border-yellow-500 pl-4">
-                        <h3 class="font-bold">Hackathon Finalist</h3>
-                        <p class="text-sm text-slate-400">Built a real-time cloud monitoring dashboard using React and AWS Lambda.</p>
-                    </li>
-                    <li class="border-l-2 border-pink-500 pl-4">
-                        <h3 class="font-bold">Open Source Contributor</h3>
-                        <p class="text-sm text-slate-400">Active contributor to various cloud-native CLI tool repositories.</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="glass p-8 rounded-3xl transform hover:scale-[1.02] transition-transform">
-                <h2 class="text-2xl font-bold mb-6 text-yellow-400">📜 Certifications</h2>
-                <div class="space-y-4">
-                    <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
-                        <span class="font-medium">AWS Certified Cloud Practitioner</span>
-                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
-                    </div>
-                    <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
-                        <span class="font-medium">Google Cloud Digital Leader</span>
-                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
-                    </div>
-                    <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-white/5">
-                        <span class="font-medium">HashiCorp Terraform Associate</span>
-                        <span class="text-sky-400 text-xs font-bold px-3 py-1 bg-sky-400/10 rounded-full cursor-pointer hover:bg-sky-400/20">Verify</span>
-                    </div>
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>Major Award Name</strong>
+                    <p>Brief description of what you achieved and the impact it made.</p>
                 </div>
-            </section>
-
-        </div>
-
-        <footer id="contact" class="mt-20 text-center text-slate-500 text-sm">
-            <div class="mb-6 flex justify-center gap-6">
-                <a href="#" class="hover:text-sky-400 transition-colors">LinkedIn</a>
-                <a href="#" class="hover:text-sky-400 transition-colors">GitHub</a>
-                <a href="mailto:contact@sangamitra.com" class="hover:text-sky-400 transition-colors">Email</a>
+                <div class="card">
+                    <strong>Project Milestone</strong>
+                    <p>Completed a significant project ahead of schedule with 100% accuracy.</p>
+                </div>
             </div>
-            <p>Built with ❤️ and Cloud logic by <span class="text-slate-300">Sangamitra Rout</span> &copy; 2026</p>
-        </footer>
-    </section>
+        </section>
 
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <div class="grid">
+                <div class="card">📜 Certificate in Web Design</div>
+                <div class="card">📜 Excellence in Leadership</div>
+                <div class="card">📜 Technical Proficiency Award</div>
+            </div>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Sangamitra Rout. Created with Passion.
+        </div>
+    </div>
+
+    <script>
+        // Script to generate the 20 yellow and 10 red flowers as requested
+        const container = document.getElementById('flower-box');
+        
+        function createFlowers(count, color) {
+            for (let i = 0; i < count; i++) {
+                const flower = document.createElement('div');
+                const size = Math.floor(Math.random() * 40) + 10; // Mix of small and big
+                flower.className = 'flower';
+                flower.style.width = size + 'px';
+                flower.style.height = size + 'px';
+                flower.style.backgroundColor = color;
+                flower.style.top = Math.random() * 100 + '%';
+                flower.style.left = Math.random() * 100 + '%';
+                
+                // Simple flower shape using multiple box-shadows or border-radius
+                flower.style.borderRadius = "50% 50% 0 50%";
+                flower.style.transform = rotate(${Math.random() * 360}deg);
+                
+                container.appendChild(flower);
+            }
+        }
+
+        createFlowers(20, '#FFD700'); // 20 Yellow
+        createFlowers(10, '#FF4136'); // 10 Red
+    </script>
 </body>
 </html>
-
