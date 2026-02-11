@@ -180,5 +180,37 @@
         createFlowers(40, '#FFD700'); // 20 Yellow
         createFlowers(20, '#FF4136'); // 10 Red
     </script>
+    <script>
+    const container = document.getElementById('flower-box');
+    
+    function createFlowers(count, color, minSize, maxSize) {
+        for (let i = 0; i < count; i++) {
+            const flower = document.createElement('div');
+            // Randomized size based on parameters
+            const size = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize; 
+            
+            flower.className = 'flower';
+            flower.style.width = size + 'px';
+            flower.style.height = size + 'px';
+            flower.style.backgroundColor = color;
+            flower.style.top = Math.random() * 100 + '%';
+            flower.style.left = Math.random() * 100 + '%';
+            
+            // Artistic rotation
+            flower.style.borderRadius = "50% 50% 0 50%";
+            flower.style.transform = rotate(${Math.random() * 360}deg);
+            
+            container.appendChild(flower);
+        }
+    }
+
+    // Your original flowers (mix of sizes)
+    createFlowers(20, '#FFD700', 10, 50); 
+    createFlowers(10, '#FF4136', 10, 50);
+
+    // The NEW 40 yellow and 40 red SMALL flowers
+    createFlowers(40, '#FFD700', 5, 15); 
+    createFlowers(40, '#FF4136', 5, 15);
+</script>
 </body>
 </html>
