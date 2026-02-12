@@ -3,183 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangamitra Rout | Portfolio</title>
+    <title>Sangamitra Rout | Cloud Computing Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         :root {
-            --bg-color: #001f3f; /* Dark Blue */
-            --yellow-flower: #FFD700;
-            --red-flower: #FF4136;
-            --text-white: #ffffff;
+            --bg-color: #000b1e; /* Deep Dark Blue */
+            --accent-yellow: #ffcc00;
+            --text-white: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-white);
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             line-height: 1.6;
         }
 
-        /* Creative Floral Background */
-        .flower-container {
+        /* Flower Decorations */
+        .flower-static {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             z-index: -1;
-            overflow: hidden;
+            color: var(--accent-yellow);
+            opacity: 0.4;
+            pointer-events: none;
         }
 
-        .flower {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.6;
-            filter: blur(1px);
+        /* Floating GIF Placeholder (Using Emoji/CSS for demo, replace with your GIF URLs) */
+        .flower-gif {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            z-index: -1;
+            /* Replace the background-image with your GIF URL */
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJtZzZyeXN4bmh4bmh4bmh4bmh4bmh4bmh4bmh4bmh4bmh4bmh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/3o7TKVUn7iM8FMEU24/giphy.gif');
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
-        /* Main Content Container */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 20px;
-            position: relative;
-            background: rgba(0, 31, 63, 0.8); /* Semi-transparent overlay */
-            border-radius: 20px;
-            backdrop-filter: blur(5px);
+        /* Navigation */
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(0, 11, 30, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
         }
 
-        /* Profile Section */
-        header {
-            text-align: center;
-            padding-bottom: 50px;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--yellow-flower);
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            background: linear-gradient(to right, #FFD700, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
         }
 
         /* Sections */
         section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border-left: 3px solid var(--red-flower);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 0 15px 15px 0;
+            min-height: 100vh;
+            padding: 5rem 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        h2 {
-            color: var(--yellow-flower);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-yellow);
+            margin-bottom: 1.5rem;
         }
 
+        .hero h1 { font-size: 4rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; }
+
+        /* Content Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-left: 4px solid var(--accent-yellow);
             transition: transform 0.3s ease;
+            border-radius: 8px;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+        .badge {
+            display: inline-block;
+            background: var(--accent-yellow);
+            color: black;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
         }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--accent-yellow);
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="flower-container" id="flower-box"></div>
+    <div class="flower-static" style="top: 5%; left: 5%; font-size: 100px;">✿</div>
+    <div class="flower-static" style="bottom: 10%; right: 5%; font-size: 150px;">❀</div>
+    <div class="flower-gif" style="top: 20%; right: 10%;"></div>
+    <div class="flower-gif" style="bottom: 20%; left: 10%;"></div>
 
-    <div class="content">
-        <header>
-            <img src="https://via.placeholder.com/180" alt="Sangamitra Rout" class="profile-img">
-            <h1>Sangamitra Rout</h1>
-            <p>Creative Professional | Visionary | Innovator</p>
-        </header>
-
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <div class="grid">
-                <div class="card">
-                    <strong>Major Award Name</strong>
-                    <p>Brief description of what you achieved and the impact it made.</p>
-                </div>
-                <div class="card">
-                    <strong>Project Milestone</strong>
-                    <p>Completed a significant project ahead of schedule with 100% accuracy.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="certificates">
-            <h2>Certificates</h2>
-            <div class="grid">
-                <div class="card">📜 Certificate in Web Design</div>
-                <div class="card">📜 Excellence in Leadership</div>
-                <div class="card">📜 Technical Proficiency Award</div>
-            </div>
-        </section>
-
-        <div class="footer">
-            &copy; 2026 Sangamitra Rout. Created with Passion.
+    <nav>
+        <div class="logo">SR.</div>
+        <div>
+            <a href="#about" style="color: white; text-decoration: none; margin-left: 20px;">About</a>
+            <a href="#achievements" style="color: white; text-decoration: none; margin-left: 20px;">Experience</a>
+            <a href="#contact" style="color: white; text-decoration: none; margin-left: 20px;">Contact</a>
         </div>
-    </div>
+    </nav>
 
-    <script>
-        // Script to generate the 40 yellow and 20 red flowers as requested
-        const container = document.getElementById('flower-box');
-        
-        function createFlowers(count, color) {
-            for (let i = 0; i < count; i++) {
-                const flower = document.createElement('div');
-                const size = Math.floor(Math.random() * 40) + 10; // Mix of small and big
-                flower.className = 'flower';
-                flower.style.width = size + 'px';
-                flower.style.height = size + 'px';
-                flower.style.backgroundColor = color;
-                flower.style.top = Math.random() * 100 + '%';
-                flower.style.left = Math.random() * 100 + '%';
-                
-                // Simple flower shape using multiple box-shadows or border-radius
-                flower.style.borderRadius = "50% 50% 0 50%";
-                flower.style.transform = rotate(${Math.random() * 360}deg);
-                
-                container.appendChild(flower);
-            }
-        }
+    <section class="hero animate_animated animate_fadeIn">
+        <div class="badge">BCA IN CLOUD COMPUTING</div>
+        <h1>I'm Sangamitra Rout</h1>
+        <p>Architecting the future through cloud solutions and creative development. Welcome to my digital garden of technology and growth.</p>
+    </section>
 
-        createFlowers(40, '#FFD700'); // 20 Yellow
-        createFlowers(20, '#FF4136'); // 10 Red
-    </script>
-    <script>
+    <section id="achievements">
+        <h2>Achievements & Certifications</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="badge">Cloud</div>
+                <h3>AWS Certified Solutions Architect</h3>
+                <p>Validation of expertise in designing and deploying scalable systems on AWS.</p>
+            </div>
+            <div class="card">
+                <div class="badge">Academic</div>
+                <h3>Hackathon Winner 2025</h3>
+                <p>First place for developing a cloud-native sustainability tracking app.</p>
+            </div>
+            <div class="card">
+                <div class="badge">Technical</div>
+                <h3>Google Cloud Practitioner</h3>
+                <p>Fundamental understanding of GCP services and cloud security.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Landscape</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Cloud Stack</h3>
+                <p>AWS, Azure, Docker, Kubernetes</p>
+            </div>
+            <div class="card">
+                <h3>Development</h3>
+                <p>Python, Java, React, Node.js</p>
+            </div>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <p>Creative Problem Solving, Team Leadership</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Sangamitra Rout | Blooming in the Cloud</p>
+    </footer>
+
 </body>
 </html>
