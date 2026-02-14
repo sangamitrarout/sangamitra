@@ -89,19 +89,28 @@
     <div class="certificates">
       <div class="certificate">
         <a href="sangamitra html5 completion certificate.pdf" target="_blank">HTML5 Certificate</a>
+        [sangamitra html5 completion certificate.pdf](https://github.com/user-attachments/files/25314996/sangamitra.html5.completion.certificate.pdf)
+
       </div>
       <div class="certificate">
         <a href="sangamitra javascript completion certifficate.pdf" target="_blank">JavaScript Certificate</a>
+        [sangamitra javascript completion certifficate.pdf](https://github.com/user-attachments/files/25314980/sangamitra.javascript.completion.certifficate.pdf)
+
       </div>
       <div class="certificate">
-        <a href="sangamitracss3 completion certificate.pdf" target="_blank">CSS3 Certificate</a>
-      </div>
-    </div>
-  </section>
 
-  <footer>
+        <a href="sangamitracss3 completion certificate.pdf" target="_blank">CSS3 Certificate</a>
+        [sangamitracss3 completion certificate.pdf](https://github.com/user-attachments/files/25314991/sangamitracss3.completion.certificate.pdf)
+        </div>
+    </div>
+
+  </section>
+<footer>
     © 2026 Sangamitra Rout | Portfolio
   </footer>
+
 </body>
 </html>
 Would you like me to also add a "Projects" section where you can showcase cloud computing mini-projects or GitHub links? That would make your portfolio even stronger.
+
+
