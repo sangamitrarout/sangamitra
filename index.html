@@ -8,190 +8,100 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, neonpink, peachpuff);
-      color: #fff;
-      overflow-x: hidden;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
     }
-
     header {
       text-align: center;
       padding: 50px 20px;
-      background: rgba(0, 0, 0, 0.6);
     }
-
     header h1 {
       font-size: 3em;
       margin: 0;
-      color: #ffdde1;
-      text-shadow: 2px 2px 8px #000;
+      color: #00d4ff;
     }
-
-    header h2 {
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #ffe4b5;
+    header p {
+      font-size: 1.2em;
+      color: #b0e0e6;
     }
-    header {
-  text-align: center;
-  padding: 50px 20px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #ffdde1;
-  text-shadow: 2px 2px 8px #000;
-}
-
-header h2 {
-  font-size: 1.5em;
-  margin-top: 10px;
-  color: #ffe4b5;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.about {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 40px;
-}
-
-.about h3 {
-  color: #ffdde1;
-  margin-bottom: 15px;
-}
-
-.certificates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.certificate {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.certificate:hover {
-  transform: scale(1.05);
-}
-
-.certificate h4 {
-  color: #ffe4b5;
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #ffdde1;
-}
-
-
-
+    .illustration {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .illustration img {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
     section {
       padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      text-align: center;
     }
-
-    .about {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 40px;
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #00ffa6;
     }
-
-    .about h3 {
-      color: #ffdde1;
-      margin-bottom: 15px;
-    }
-
     .certificates {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
     }
-
     .certificate {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
       padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      width: 250px;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
-
     .certificate:hover {
       transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
     }
-
-    .certificate h4 {
-      color: #ffe4b5;
-      margin-bottom: 10px;
+    .certificate a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
     }
-
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #ffdde1;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 0.9em;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Sangamitra Rout</h1>
-    <h2>BCA in Cloud Computing | Kristu Jayanti University, Bangalore</h2>
+    <p>BCA in Cloud Computing | Kristu Jayanti University, Bangalore</p>
   </header>
 
-  <section class="about">
-    <h3>About Me</h3>
-    <p>
-      I am currently pursuing a Bachelor of Computer Applications (BCA) in Cloud Computing 
-      at Kristu Jayanti University, Bangalore, Karnataka. Passionate about modern web technologies, 
-      I have successfully completed certifications in HTML5, CSS3, and JavaScript from Infosys Springboard.
-    </p>
-  </section>
+  <div class="illustration">
+    <!-- Replace with your cartoon illustration -->
+    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/cloud-1836650_1280.jpg" alt="Cloud Computing Illustration">
+  </div>
 
   <section>
-    <h3 style="color:#ffdde1;">Certificates</h3>
+    <h2>My Certificates</h2>
     <div class="certificates">
       <div class="certificate">
-        <h4>HTML5 - The Language</h4>
-        <p>Completed on December 25, 2025</p>
-        <p>Issued by Infosys Springboard</p>
+        <a href="sangamitra html5 completion certificate.pdf" target="_blank">HTML5 Certificate</a>
       </div>
       <div class="certificate">
-        <h4>CSS3</h4>
-        <p>Completed on December 30, 2025</p>
-        <p>Issued by Infosys Springboard</p>
+        <a href="sangamitra javascript completion certifficate.pdf" target="_blank">JavaScript Certificate</a>
       </div>
       <div class="certificate">
-        <h4>JavaScript</h4>
-        <p>Completed on December 30, 2025</p>
-        <p>Issued by Infosys Springboard</p>
+        <a href="sangamitracss3 completion certificate.pdf" target="_blank">CSS3 Certificate</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Sangamitra Rout | Designed with 💻 & Creativity</p>
+    © 2026 Sangamitra Rout | Portfolio
   </footer>
 </body>
 </html>
-
-
-
 
