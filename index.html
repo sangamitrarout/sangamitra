@@ -3,91 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sangamitra Rout - Portfolio</title>
+  <title>Lovable Portfolio</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #008F9B);
-      color: #C0C0C0;
-    }
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      <img src="profile.jpg" alt="Your Name" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
-      }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      color: #0FF;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #FFFF00;
-    }
-    .illustration {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .illustration img {
-      width: 60%;
-      max-width: 600px;
-      border-radius: 10px;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #FFFF00;
-    }
-    .certificates {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .certificate {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .certificate:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .certificate a {
-      text-decoration: none;
-      color: #0FF;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.5);
-      font-size: 0.9em;
-      color: #ccc;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
+    header { background: #4a148c; color: #fff; padding: 40px; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5em; }
+    nav { background: #6a1b9a; padding: 10px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 40px; max-width: 1000px; margin: auto; }
+    .projects { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { flex: 1 1 300px; border: 1px solid #ccc; border-radius: 8px; padding: 20px; background: #f9f9f9; }
+    .card h3 { margin-top: 0; }
+    footer { background: #4a148c; color: #fff; text-align: center; padding: 20px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>
-      HI,
-      I'M Sangamitra Rout</h1>
-    <p>I'M a 1st Year Student,Currently Pursuing BCA in Cloud Computing,I Enjoy Learning Codes and i have knowledge in C,Python,Data structure programming language.  | Kristu Jayanti University, Bangalore Karnataka</p>
+    <h1>Lovable</h1>
+    <p>Welcome to my portfolio showcase</p>
   </header>
 
-  <div class="illustration">
-    <!-- Replace with your cartoon illustration -->
-    <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/cloud-1836650_1280.jpg" alt="Cloud Computing Illustration">
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Lovable, a creative professional passionate about design and development. This portfolio highlights my work and achievements.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Description of project one goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Description of project two goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Description of project three goes here.</p>
+      </div>
+    </div>
     <h2>My Certificates</h2>
     <div class="certificates">
       <div class="certificate">
