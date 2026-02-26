@@ -322,17 +322,8 @@ footer{
 
 <script>
 
-
-
-
-
-
-    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
     e.preventDefault();
-        const form = document.getElementById("feedbackForm");
-
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
 
     const contactData = {
         name: document.getElementById("name").value,
@@ -363,9 +354,7 @@ footer{
     }
 });
 
-
-
-       
+ 
 </script>
       <footer>
     © 2026 Sangamitra Rout | Cloud Computing Portfolio
