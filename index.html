@@ -329,6 +329,10 @@ footer{
 
     document.getElementById("contactForm").addEventListener("submit", async (e) => {
     e.preventDefault();
+        const form = document.getElementById("feedbackForm");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
     const contactData = {
         name: document.getElementById("name").value,
