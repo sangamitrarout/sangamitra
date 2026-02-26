@@ -321,7 +321,13 @@ footer{
 </form>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
+
+
+
+
+
+
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const contactData = {
@@ -329,6 +335,8 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
     };
+
+    console.log("Sending:", contactData);
 
     try {
         const response = await fetch("https://backend-3-4dab.onrender.com", {
@@ -338,12 +346,22 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
         });
 
         const result = await response.json();
-        alert(result.message || "Message sent!");
+        console.log("Response:", result);
+
+        if (result.success) {
+            alert("✅ " + result.message);
+        } else {
+            alert("❌ Error: " + (result.error || "Unknown issue"));
+        }
     } catch (error) {
-        alert("Error: " + error.message);
+        console.error("Fetch error:", error);
+        alert("❌ Could not connect to backend");
     }
 });
 
+
+
+       
 </script>
       <footer>
     © 2026 Sangamitra Rout | Cloud Computing Portfolio
