@@ -325,39 +325,32 @@ footer{
     </footer>
 
 <script>
-<form id="contactForm">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message"></textarea>
   <button type="submit">Send</button>
 </form>
 
 <script>
-  const form = document.getElementById("contactForm");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // stop page reload
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await fetch(https://backend-1-u43b.onrender.com, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Error connecting to server.");
-    }
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value
+    };
+    await fetch(https://backend-1-u43b.onrender.com, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
+    alert("Message sent!");
   });
+</script>
+
+
 </script>
 </body>
 </html>
