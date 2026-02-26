@@ -322,7 +322,7 @@ footer{
 
 <script>
 
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const contactData = {
@@ -334,7 +334,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     console.log("Sending:", contactData);
 
     try {
-        const response = await fetch("https://backend-3-4dab.onrender.com", {
+        const response = await fetch("https://backend-3-4dab.onrender.com/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(contactData),
@@ -354,7 +354,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     }
 });
 
- 
+
 </script>
       <footer>
     © 2026 Sangamitra Rout | Cloud Computing Portfolio
