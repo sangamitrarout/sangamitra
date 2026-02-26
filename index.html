@@ -327,7 +327,8 @@ footer{
       const message = document.getElementById("message").value;
 
       try {
-        const response = await fetch("https://backend-1-u43b.onrender.com", {
+        const response = await fetch("https://backend-1-u43b.onrender.com/api/contact", {
+
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ name, email, message }),
