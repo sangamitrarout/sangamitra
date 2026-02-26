@@ -321,35 +321,27 @@ footer{
 </form>
 
 <script>
-  const form = document.getElementById("contactForm");
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
+    const contactData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
 
-    form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+    try {
+        const response = await fetch("http://localhost:9900/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(contactData),
+        });
 
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value
-  };
-
-  try {
-    const res = await fetch("https://backend-3-4dab.onrender.com/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      alert("Message sent successfully!");
-    } else {
-      alert("Error: " + (data.error || "Unknown error"));
+        const result = await response.json();
+        alert(result.message || "Message sent!");
+    } catch (error) {
+        alert("Error: " + error.message);
     }
-  } catch (err) {
-    console.error(err);
-    alert("Failed to connect to backend");
-  }
 });
 
 </script>
