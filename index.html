@@ -333,7 +333,8 @@ footer{
     };
 
     try {
-      const res = await fetch("https://backend-3-4dab.onrender.com", {
+      const res = await fetch("https://backend-3-4dab.onrender.com", { ... })
+        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
