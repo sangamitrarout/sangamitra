@@ -349,6 +349,9 @@ footer{
     .then(data => {
         document.getElementById("responseMessage").innerText = data.message;
         document.getElementById("contactForm").reset();
+        alert("Message sent successfully!");
+
+
     })
     .catch(error => {
         document.getElementById("responseMessage").innerText = "Error sending message.";
